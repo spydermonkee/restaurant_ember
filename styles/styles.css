@@ -1,7 +1,36 @@
+body {
+  background-image:url("../images/octopus-bg.gif");
+  background-size: 100%;
+
+}
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 25px !important;
+}
+
 .tables-col {
-  margin-bottom: 25px;
-  border:1px solid lightblue;
+  background-color: blanchedalmond;
+  margin: 10px;
+  border:3px solid steelblue;
   height: 50px;
   text-align: center;
   padding-top:12px;
+}
+
+#header {
+  background-color: blanchedalmond;
+  color: steelblue;
+  font-family: 'Amatic SC', 'cursive';
+  font-size: 5em;
+  font-weight: 300;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+h3 {
+  color: blanchedalmond !important;
+  text-shadow: 3px 2px 2px steelblue;
 }

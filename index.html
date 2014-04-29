@@ -5,19 +5,20 @@
     <title>Restaurant Manager</title>
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/bootstrap.css">
+    <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <script type="text/x-handlebars" data-template-name="restaurant">
       <div class="container">
         <div class="row" id="header">
-          <h1>OCTO-PIE</h1>
+          <p>OCTO-PIE</p>
         </div>
         <div class="row">
           <div class="col-sm-4" id="tables">
             <h3>Tables</h3>
             <div class="row tables-row">
               {{#each}}
-                <div class="col-sm-6 tables-col">{{number}}</div>
+                <div class="col-xs-5 tables-col">{{number}}</div>
               {{/each}}
             </div>
           </div>
