@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Restaurant Manager</title>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/bootstrap.css">
+  </head>
+  <body>
+    <script type="text/x-handlebars" data-template-name="restaurant">
+      <div class="container">
+        <div class="row" id="header">
+          <h1>OCTO-PIE</h1>
+        </div>
+        <div class="row">
+          <div class="col-sm-4" id="tables">
+            <h3>Tables</h3>
+            <div class="row tables-row">
+              {{#each}}
+                <div class="col-sm-6 tables-col">{{number}}</div>
+              {{/each}}
+            </div>
+          </div>
+          <div class="col-sm-2" id="menu">
+
+          </div>
+          <div class="col-sm-6" id="order">
+            <h3>Table: </h3>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script src="js/libs/jquery-1.10.2.min.js"></script>
+    <script src="js/libs/handlebars-1.0.0.js"></script>
+    <script src="js/libs/ember.js"></script>
+    <script src="js/libs/ember-data.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/models/table.js"></script>
+  </body>
+</html>
