@@ -1,9 +1,14 @@
 Restaurant.Router.map(function() {
-  this.resource('restaurant', { path: '/' });
+  this.resource('tables', { path: '/tables' }, function() {
+    this.resource('new')
+  });
 });
 
-Restaurant.RestaurantRoute = Ember.Route.extend ({
+Restaurant.TablesRoute = Ember.Route.extend ({
   model: function() {
-    return this.store.find('table');
+    return Ember.RSVP.hash({
+      tables: this.store.find('table'),
+      items: this.store.find('item')
+    });
   }
 });

@@ -8,35 +8,47 @@
     <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <script type="text/x-handlebars" data-template-name="restaurant">
+    <script type="text/x-handlebars">
       <div class="container">
         <div class="row" id="header">
           <p>OCTO-PIE</p>
         </div>
         <div class="row">
-          <div class="col-sm-4" id="tables">
-            <h3>Tables</h3>
-            <div class="row tables-row">
-              {{#each}}
-                <div class="col-xs-5 tables-col">{{number}}</div>
-              {{/each}}
-            </div>
-          </div>
-          <div class="col-sm-2" id="menu">
-
-          </div>
-          <div class="col-sm-6" id="order">
-            <h3>Table: </h3>
-          </div>
+          {{outlet}}
         </div>
       </div>
     </script>
+
+    <script type="text/x-handlebars" id="tables">
+      <div class="col-sm-4" id="tables">
+        <h3>Tables</h3>
+        <div class="row tables-row">
+          {{#each tables}}
+            <div class="col-xs-5 tables-col">{{number}}</div>
+          {{/each}}
+        </div>
+
+      </div>
+      <div class="col-sm-2" id="menu">
+        {{#each items}}
+            <div class="items-col">{{name}}</div>
+        {{/each}}
+      </div>
+      <div class="col-sm-6" id="order">
+        <h3>Table: </h3>
+      </div>
+      <button {{action addTable}}>Add a table</button>
+      {{outlet}}
+    </script>
+
     <script src="js/libs/jquery-1.10.2.min.js"></script>
     <script src="js/libs/handlebars-1.0.0.js"></script>
     <script src="js/libs/ember.js"></script>
     <script src="js/libs/ember-data.js"></script>
     <script src="js/application.js"></script>
     <script src="js/router.js"></script>
+    <script src="js/controllers/tables_controller.js"></script>
     <script src="js/models/table.js"></script>
+    <script src="js/models/item.js"></script>
   </body>
 </html>
